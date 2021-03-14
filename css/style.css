@@ -2,12 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
 :root {
-  --bg-color: rgba(53, 59, 72, 1);
-  --font-color: rgba(204, 204, 204, 1);
-  --header-font: rgba(221, 221, 221, 1);
-  --btn-color: rgba(74, 71, 163, 0.7);
-  --hover-color: rgba(65, 60, 105, 0.7);
-  --overlay-color: rgba(45, 52, 54, 0.8);
+  --font-color: rgba(170, 166, 157, 1);
+  --bg-color: rgba(30, 39, 46, 1);
+  --btn-color: rgba(0, 210, 211, 0.5);
+  --btn-hover-color: rgba(1, 163, 164, 0.5);
+  --header-title: rgba(236, 240, 241, 1);
+  --secondary-header-title: rgba(189, 195, 199, 1);
 }
 
 * {
@@ -21,7 +21,6 @@ h1 {
   font-size: 6rem;
   font-weight: 500;
   letter-spacing: 0.4rem;
-  color: var(--header-font);
   text-shadow: 5px 5px 8px #000;
   font-family: "Monoton", cursive;
 }
@@ -30,27 +29,24 @@ h2 {
   font-size: 4rem;
   font-weight: 500;
   letter-spacing: 0.4rem;
-  color: var(--font-color);
   text-shadow: 5px 5px 8px #000;
   font-family: "Monoton", cursive;
 }
 
 p {
   font-size: 2.4rem;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 0.2rem;
-  color: var(--font-color);
-  text-shadow: 5px 5px 8px #000;
-  font-family: "Monoton", cursive;
+  text-shadow: 1px 1px 3px #000;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 a {
   font-size: 2.4rem;
   font-weight: 400;
   letter-spacing: 0.2rem;
-  color: var(--font-color);
   text-decoration: none !important;
-  text-shadow: 5px 5px 8px #000;
+  text-shadow: 3px 3px 5px #000;
   font-family: "Monoton", cursive;
 }
 
@@ -59,7 +55,9 @@ body {
   font-weight: 400;
   line-height: 1.7;
   overflow-x: hidden;
+  color: var(--font-color);
   letter-spacing: 0.2rem;
+  text-transform: uppercase;
   background: var(--bg-color);
 }
 
@@ -124,6 +122,14 @@ header.header-section .header-content .text-content {
   text-transform: uppercase;
 }
 
+header.header-section .header-content .text-content h1 {
+  color: var(--header-title);
+}
+
+header.header-section .header-content .text-content h2 {
+  color: var(--secondary-header-title);
+}
+
 header.header-section .header-content .text-content a.primaryBtn {
   outline: none;
   margin: 0.5rem 0;
@@ -137,12 +143,12 @@ header.header-section .header-content .text-content a.primaryBtn {
           box-shadow: 3px 3px 8px #000;
   -webkit-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
+  color: var(--secondary-header-title);
 }
 
 header.header-section .header-content .text-content a.primaryBtn:hover {
-  color: var(--font-color);
   letter-spacing: 0.4rem;
-  background: var(--hover-color);
+  background: var(--btn-hover-color);
 }
 
 header.header-section .header-content .text-content .social-content {
@@ -161,9 +167,131 @@ header.header-section .header-content .text-content .social-content a {
 }
 
 header.header-section .header-content .text-content .social-content a:hover {
-  color: var(--hover-color);
+  color: var(--btn-hover-color);
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
+}
+
+section.about-section {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+  position: relative;
+}
+
+section.about-section h1.primary-heading {
+  text-align: center;
+  color: var(--header-title);
+}
+
+section.about-section h1.primary-heading::before {
+  content: "";
+  top: 5rem;
+  left: 10rem;
+  width: 200px;
+  height: 10px;
+  position: absolute;
+  -webkit-box-shadow: 3px 3px 5px #000;
+          box-shadow: 3px 3px 5px #000;
+  background: var(--font-color);
+}
+
+section.about-section h1.primary-heading::after {
+  content: "";
+  top: 5rem;
+  right: 10rem;
+  width: 200px;
+  height: 10px;
+  position: absolute;
+  -webkit-box-shadow: 3px 3px 5px #000;
+          box-shadow: 3px 3px 5px #000;
+  background: var(--font-color);
+}
+
+section.about-section .about-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 4rem auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section.about-section .about-content .about-text {
+  width: 600px;
+}
+
+section.about-section .about-content .about-text h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+section.about-section .about-content .about-text p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: justify;
+  letter-spacing: 0.2rem;
+  text-shadow: 2px 2px 4px #000;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+section.about-section .about-content .about-text a {
+  color: #fff;
+  outline: none;
+  text-shadow: none;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 0.2rem 2rem;
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: 0.3rem;
+  background: var(--btn-color);
+  -webkit-box-shadow: 3px 3px 8px #000;
+          box-shadow: 3px 3px 8px #000;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+section.about-section .about-content .about-text a:hover {
+  letter-spacing: 0.4rem;
+  background: var(--btn-hover-color);
+}
+
+section.about-section .about-content .about-img {
+  width: 20rem;
+  height: 20rem;
+  outline-offset: 1rem;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-box-shadow: 5px 5px 8px #000;
+          box-shadow: 5px 5px 8px #000;
+}
+
+section.about-section .about-content .about-img .img {
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(74, 71, 163, 0.4)), to(rgba(65, 60, 105, 0.4))), url("../img/1.jpg") no-repeat center center/cover;
+  background: linear-gradient(rgba(74, 71, 163, 0.4), rgba(65, 60, 105, 0.4)), url("../img/1.jpg") no-repeat center center/cover;
+}
+
+section.about-section .about-content .about-img:hover {
+  outline: 1rem solid var(--btn-color);
+  -webkit-transform: scale(1.06) translateY(-0.5rem);
+          transform: scale(1.06) translateY(-0.5rem);
 }
 
 @media only screen and (min-width: 769px) and (max-width: 991px) {
@@ -178,6 +306,54 @@ header.header-section .header-content .text-content .social-content a:hover {
   }
   header.header-section .header-content .text-content .social-content a {
     font-size: 2rem;
+  }
+  section.about-section h1.primary-heading {
+    font-size: 3rem;
+    text-align: center;
+  }
+  section.about-section h1.primary-heading::before {
+    top: 3.4rem;
+    left: 5rem;
+    width: 120px;
+    height: 5px;
+  }
+  section.about-section h1.primary-heading::after {
+    top: 3.4rem;
+    right: 5rem;
+    width: 120px;
+    height: 5px;
+  }
+  section.about-section .about-content {
+    margin: 2rem 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.about-section .about-content .about-text {
+    width: 700px;
+    text-align: center;
+  }
+  section.about-section .about-content .about-text h1 {
+    font-size: 2.4rem;
+  }
+  section.about-section .about-content .about-text p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  section.about-section .about-content .about-text a {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+  }
+  section.about-section .about-content .about-img {
+    width: 18.4rem;
+    height: 18.4rem;
+    margin: 1rem 0 2rem 0;
+    outline-offset: 0.5rem;
+  }
+  section.about-section .about-content .about-img:hover {
+    outline: 0.5rem solid var(--btn-color);
+    -webkit-transform: scale(1.04) translateY(-0.2rem);
+            transform: scale(1.04) translateY(-0.2rem);
   }
 }
 
@@ -198,6 +374,54 @@ header.header-section .header-content .text-content .social-content a:hover {
   header.header-section .header-content .text-content .social-content a {
     font-size: 2rem;
   }
+  section.about-section h1.primary-heading {
+    font-size: 3rem;
+    text-align: center;
+  }
+  section.about-section h1.primary-heading::before {
+    top: 3.4rem;
+    left: 5rem;
+    width: 120px;
+    height: 5px;
+  }
+  section.about-section h1.primary-heading::after {
+    top: 3.4rem;
+    right: 5rem;
+    width: 120px;
+    height: 5px;
+  }
+  section.about-section .about-content {
+    margin: 2rem 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.about-section .about-content .about-text {
+    width: 700px;
+    text-align: center;
+  }
+  section.about-section .about-content .about-text h1 {
+    font-size: 2.4rem;
+  }
+  section.about-section .about-content .about-text p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  section.about-section .about-content .about-text a {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+  }
+  section.about-section .about-content .about-img {
+    width: 18.4rem;
+    height: 18.4rem;
+    margin: 1rem 0 2rem 0;
+    outline-offset: 0.5rem;
+  }
+  section.about-section .about-content .about-img:hover {
+    outline: 0.5rem solid var(--btn-color);
+    -webkit-transform: scale(1.04) translateY(-0.2rem);
+            transform: scale(1.04) translateY(-0.2rem);
+  }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 500px) {
@@ -212,11 +436,53 @@ header.header-section .header-content .text-content .social-content a:hover {
     font-size: 1.5rem;
   }
   header.header-section .header-content .text-content a.primaryBtn {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   header.header-section .header-content .text-content .social-content a {
-    margin: 1rem 1rem;
-    font-size: 1.2rem;
+    margin: 0 1.2rem 0 1.2rem;
+    font-size: 1.8rem;
+  }
+  section.about-section h1.primary-heading {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+  section.about-section h1.primary-heading::before {
+    content: none;
+  }
+  section.about-section h1.primary-heading::after {
+    content: none;
+  }
+  section.about-section .about-content {
+    margin: 2rem 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.about-section .about-content .about-text {
+    width: 700px;
+    text-align: center;
+  }
+  section.about-section .about-content .about-text h1 {
+    font-size: 2.4rem;
+  }
+  section.about-section .about-content .about-text p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  section.about-section .about-content .about-text a {
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+  }
+  section.about-section .about-content .about-img {
+    width: 18.4rem;
+    height: 18.4rem;
+    margin: 1rem 0 2rem 0;
+    outline-offset: 0.5rem;
+  }
+  section.about-section .about-content .about-img:hover {
+    outline: 0.5rem solid var(--btn-color);
+    -webkit-transform: scale(1.04) translateY(-0.2rem);
+            transform: scale(1.04) translateY(-0.2rem);
   }
 }
 /*# sourceMappingURL=style.css.map */
