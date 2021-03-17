@@ -1,14 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
 
 :root {
-  --font-color: rgba(170, 166, 157, 1);
+  --font-color: rgba(236, 240, 241, 1);
+  --text-content: rgba(223, 230, 233, 1);
   --bg-color: rgba(30, 39, 46, 1);
   --btn-color: rgba(0, 210, 211, 0.5);
   --btn-hover-color: rgba(1, 163, 164, 0.5);
   --header-title: rgba(236, 240, 241, 1);
   --secondary-header-title: rgba(189, 195, 199, 1);
+  --achievement-color: rgba(51, 51, 51, 1);
+  --achievement-font: rgba(99, 110, 114, 1);
 }
 
 * {
@@ -50,6 +53,10 @@ a {
   text-shadow: 3px 3px 5px #000;
   font-family: "Monoton", cursive;
 }
+
+li {
+  list-style: none;
+}
 // END UTILITY CLASSES
 
 body {
@@ -57,7 +64,6 @@ body {
   font-weight: 400;
   line-height: 1.7;
   overflow-x: hidden;
-  color: var(--font-color);
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   background: var(--bg-color);
@@ -187,7 +193,7 @@ section.about-section {
   left: 0;
   width: 100%;
   height: 100vh;
-  padding: 2rem;
+  padding: 2rem 0;
   position: relative;
 
   h1.primary-heading {
@@ -219,8 +225,8 @@ section.about-section {
 
   .about-content {
     display: flex;
-    margin: 4rem auto;
     flex-wrap: wrap;
+    padding: 4rem 2rem;
     align-items: center;
     align-content: center;
     justify-content: space-between;
@@ -231,28 +237,30 @@ section.about-section {
         font-size: 4rem;
         font-weight: 900;
         letter-spacing: 0.2rem;
+        color: var(--header-title);
         font-family: "Roboto Condensed", sans-serif;
       }
 
       p {
-        font-size: 1.5rem;
-        font-weight: 700;
+        font-size: 1.2rem;
+        font-weight: 500;
         text-align: justify;
         letter-spacing: 0.2rem;
-        text-shadow: 2px 2px 4px #000;
+        color: var(--text-content);
+        text-shadow: 3px 3px 5px #000;
         font-family: "Open Sans Condensed", sans-serif;
       }
 
       a {
-        color: #fff;
         outline: none;
         text-shadow: none;
         font-size: 1.6rem;
         font-weight: 400;
-        padding: 0.2rem 2rem;
+        padding: 0.4rem 1.8rem;
         display: inline-block;
         text-decoration: none;
         letter-spacing: 0.3rem;
+        color: var(--text-content);
         background: var(--btn-color);
         box-shadow: 3px 3px 8px #000;
         transition: all 0.4s ease-in-out;
@@ -288,6 +296,158 @@ section.about-section {
 }
 // END ABOUT SECTION
 
+// ACHIEVEMENT SECTION
+section.achievement {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #ccc;
+
+  .header-main {
+    display: flex;
+    padding: 0.5rem 0;
+    background: #ddd;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 8px rgba(#000, 0.4);
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 0.2rem;
+      text-transform: uppercase;
+      color: #222;
+      text-shadow: 3px 3px 5px #000;
+      font-family: "Roboto Condensed", sans-serif;
+    }
+
+    i {
+      font-size: 3rem;
+      margin: -0.5rem 1rem 0 0;
+      color: #222;
+      text-shadow: 3px 3px 5px #000;
+    }
+  }
+
+  .timeline {
+    padding: 50px 0;
+
+    ul {
+      h1.edu {
+        width: 20%;
+        color: #000;
+        line-height: 2;
+        font-size: 2rem;
+        display: flex;
+        padding: 0.2rem 8rem;
+        font-weight: 700;
+        background: #ddd;
+        text-align: center;
+        align-items: center;
+        letter-spacing: 0.2rem;
+        justify-content: center;
+        margin: 0 auto 1rem auto;
+        border: 0.2rem solid #333;
+        text-shadow: none;
+        box-shadow: 3px 3px 8px 2px rgba(#000, 0.4);
+        font-family: "Roboto Condensed", sans-serif;
+      }
+
+      li {
+        width: 6px;
+        margin: 0 auto;
+        padding-top: 30px;
+        position: relative;
+        background: var(--achievement-color);
+        box-shadow: 3px 3px 8px 2px rgba(#000, 0.4);
+
+        div {
+          bottom: 0;
+          opacity: 1;
+          width: 500px;
+          padding: 1rem;
+          position: relative;
+          background: #ccc;
+          // visibility: hidden;
+          backface-visibility: hidden;
+          text-transform: uppercase;
+          border: 0.25rem solid #333;
+          // transition: all 2s ease-in-out;
+          box-shadow: 3px 3px 8px rgba(#000, 0.4);
+
+          h1 {
+            color: #000;
+            line-height: 2;
+            font-weight: 900;
+            text-shadow: none;
+            font-size: 1.2rem;
+            letter-spacing: 0.2rem;
+            font-family: "Roboto Condensed", sans-serif;
+
+            i {
+              padding: 0 0.2rem 0 0;
+              font-size: 0.8rem;
+              color: var(--achievement-color);
+            }
+          }
+
+          p {
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.6;
+            letter-spacing: 0.2rem;
+            text-shadow: none;
+            color: rgba(34, 34, 34, 1);
+            font-family: "Open Sans Condensed", sans-serif;
+          }
+        }
+
+        &:nth-child(odd) div {
+          left: 40px;
+          transform: translate(20px, 0);
+        }
+
+        &:nth-child(even) div {
+          left: -530px;
+          transform: translate(-20px, 0);
+        }
+
+        &::before {
+          content: "";
+          left: 50%;
+          bottom: 0;
+          z-index: 1;
+          width: 40px;
+          height: 40px;
+          padding: 1rem;
+          border-radius: 50%;
+          position: absolute;
+          transform: translateX(-50%);
+          background: #333;
+          box-shadow: 3px 3px 8px 2px rgba(#000, 0.4);
+          transition: background 0.5s ease-in-out;
+        }
+
+        &::after {
+          content: "";
+          left: 50%;
+          bottom: 0;
+          width: 20px;
+          height: 15px;
+          z-index: 2;
+          background: url("../img/graduation-cap-solid.svg") no-repeat center
+            center/cover;
+          position: absolute;
+          transform: translate(-50%, -90%);
+          transition: background 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+}
+// END ACHIEVEMENT SECTION
+
 // MEDIA QUERIES
 @media only screen and (min-width: 769px) and (max-width: 991px) {
   header.header-section {
@@ -313,6 +473,7 @@ section.about-section {
   }
 
   section.about-section {
+    height: 100%;
     h1.primary-heading {
       font-size: 3rem;
       text-align: center;
@@ -333,7 +494,7 @@ section.about-section {
     }
 
     .about-content {
-      margin: 2rem 0;
+      padding: 2rem 2rem;
       justify-content: center;
 
       .about-text {
@@ -346,24 +507,52 @@ section.about-section {
 
         p {
           font-size: 1.2rem;
-          text-align: center;
+          text-align: justify;
         }
 
         a {
           margin: 0 0 1rem 0;
-          font-size: 1.2rem;
+          font-size: 1.25rem;
         }
       }
 
       .about-img {
-        width: 18.4rem;
-        height: 18.4rem;
+        width: 18rem;
+        height: 18rem;
         margin: 1rem 0 2rem 0;
         outline-offset: 0.5rem;
 
         &:hover {
           outline: 0.5rem solid var(--btn-color);
           transform: scale(1.04) translateY(-0.2rem);
+        }
+      }
+    }
+  }
+
+  section.achievement {
+    .header-main {
+      h1 {
+        font-size: 4rem;
+      }
+    }
+
+    .timeline {
+      ul {
+        li {
+          div {
+            width: 360px;
+          }
+
+          &:nth-child(odd) div {
+            left: 40px;
+            transform: translate(20px, 0);
+          }
+
+          &:nth-child(even) div {
+            left: -400px;
+            transform: translate(-20px, 0);
+          }
         }
       }
     }
@@ -397,6 +586,7 @@ section.about-section {
   }
 
   section.about-section {
+    height: 100%;
     h1.primary-heading {
       font-size: 3rem;
       text-align: center;
@@ -417,7 +607,7 @@ section.about-section {
     }
 
     .about-content {
-      margin: 2rem 0;
+      padding: 2rem 2rem;
       justify-content: center;
 
       .about-text {
@@ -430,7 +620,7 @@ section.about-section {
 
         p {
           font-size: 1.2rem;
-          text-align: center;
+          text-align: justify;
         }
 
         a {
@@ -448,6 +638,34 @@ section.about-section {
         &:hover {
           outline: 0.5rem solid var(--btn-color);
           transform: scale(1.04) translateY(-0.2rem);
+        }
+      }
+    }
+  }
+
+  section.achievement {
+    .header-main {
+      h1 {
+        font-size: 4rem;
+      }
+    }
+
+    .timeline {
+      ul {
+        li {
+          div {
+            width: 320px;
+          }
+
+          &:nth-child(odd) div {
+            left: 20px;
+            transform: translate(20px, 0);
+          }
+
+          &:nth-child(even) div {
+            left: -330px;
+            transform: translate(-20px, 0);
+          }
         }
       }
     }
@@ -482,21 +700,24 @@ section.about-section {
   }
 
   section.about-section {
+    height: 100%;
+    padding: 2rem 0 0 0;
+
     h1.primary-heading {
       font-size: 2.4rem;
       text-align: center;
 
       &::before {
-        content: none;
+        display: none;
       }
 
       &::after {
-        content: none;
+        display: none;
       }
     }
 
     .about-content {
-      margin: 2rem 0;
+      padding: 1rem 2rem;
       justify-content: center;
 
       .about-text {
@@ -509,7 +730,7 @@ section.about-section {
 
         p {
           font-size: 1rem;
-          text-align: center;
+          text-align: justify;
         }
 
         a {
@@ -519,14 +740,173 @@ section.about-section {
       }
 
       .about-img {
-        width: 18.4rem;
-        height: 18.4rem;
+        width: 16rem;
+        height: 16rem;
         margin: 1rem 0 2rem 0;
         outline-offset: 0.5rem;
 
         &:hover {
           outline: 0.5rem solid var(--btn-color);
           transform: scale(1.04) translateY(-0.2rem);
+        }
+      }
+    }
+  }
+
+  section.achievement {
+    .header-main {
+      h1 {
+        font-size: 4rem;
+      }
+    }
+
+    .timeline {
+      ul {
+        li {
+          margin: 0 2rem;
+          div {
+            width: 280px;
+
+            h1 {
+              font-size: 1rem;
+            }
+
+            p {
+              font-size: 0.8rem;
+            }
+          }
+
+          &:nth-child(odd) div {
+            left: 20px;
+            transform: translate(20px, 0);
+          }
+
+          &:nth-child(even) div {
+            left: 20px;
+            transform: translate(20px, 0);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  header.header-section {
+    .header-content {
+      left: 3%;
+      right: 3%;
+
+      .text-content {
+        h1.primary-heading {
+          font-size: 2rem;
+        }
+        h2.secondary-heading {
+          font-size: 1.5rem;
+        }
+        a.primaryBtn {
+          font-size: 1.2rem;
+        }
+
+        .social-content {
+          a {
+            margin: 0 1.2rem 0 1.2rem;
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  section.about-section {
+    height: 100%;
+    padding: 2rem 0 0 0;
+
+    h1.primary-heading {
+      font-size: 2.4rem;
+      text-align: center;
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .about-content {
+      padding: 1rem 2rem;
+      justify-content: center;
+
+      .about-text {
+        width: 700px;
+        text-align: center;
+
+        h1 {
+          font-size: 2.4rem;
+        }
+
+        p {
+          font-size: 1rem;
+          text-align: justify;
+        }
+
+        a {
+          margin: 0 0 1rem 0;
+          font-size: 1rem;
+        }
+      }
+
+      .about-img {
+        width: 16rem;
+        height: 16rem;
+        margin: 1rem 0 2rem 0;
+        outline-offset: 0.5rem;
+
+        &:hover {
+          outline: 0.5rem solid var(--btn-color);
+          transform: scale(1.04) translateY(-0.2rem);
+        }
+      }
+    }
+  }
+
+  section.achievement {
+    .header-main {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+
+    .timeline {
+      ul {
+        h1.edu {
+          font-size: 1.4rem;
+        }
+        li {
+          margin: 0 2rem;
+          div {
+            width: 240px;
+
+            h1 {
+              font-size: 1rem;
+            }
+
+            p {
+              font-size: 0.8rem;
+            }
+          }
+
+          &:nth-child(odd) div {
+            left: 20px;
+            transform: translate(20px, 0);
+          }
+
+          &:nth-child(even) div {
+            left: 20px;
+            transform: translate(20px, 0);
+          }
         }
       }
     }
