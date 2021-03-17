@@ -1,17 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
 
 :root {
-  --font-color: rgba(236, 240, 241, 1);
-  --text-content: rgba(223, 230, 233, 1);
-  --bg-color: rgba(30, 39, 46, 1);
-  --btn-color: rgba(0, 210, 211, 0.5);
-  --btn-hover-color: rgba(1, 163, 164, 0.5);
-  --header-title: rgba(236, 240, 241, 1);
-  --secondary-header-title: rgba(189, 195, 199, 1);
-  --achievement-color: rgba(51, 51, 51, 1);
-  --achievement-font: rgba(99, 110, 114, 1);
+  --header-h1: rgba(238, 238, 238, 1);
+  --header-h2: rgba(158, 158, 158, 1);
+  --btn-primary: rgba(0, 121, 107, 0.5);
+  --btn-secondary: rgba(0, 137, 123, 0.5);
+  --header-font: rgba(224, 224, 224, 1);
+
+  --about-bg: rgba(19, 20, 24, 1);
+  --about-p: rgba(189, 189, 189, 1);
+
+  --resume-h1: rgba(51, 51, 51, 1);
+  --resume-p: rgba(68, 68, 68, 1);
+  --resume-bg: rgba(204, 204, 204, 1);
+  --resume-header: rgba(221, 221, 221, 1);
 }
 
 * {
@@ -25,7 +30,6 @@ h1 {
   font-size: 6rem;
   font-weight: 500;
   letter-spacing: 0.4rem;
-  text-shadow: 5px 5px 8px #000;
   font-family: "Monoton", cursive;
 }
 
@@ -33,7 +37,6 @@ h2 {
   font-size: 4rem;
   font-weight: 500;
   letter-spacing: 0.4rem;
-  text-shadow: 5px 5px 8px #000;
   font-family: "Monoton", cursive;
 }
 
@@ -41,7 +44,6 @@ p {
   font-size: 2.4rem;
   font-weight: 700;
   letter-spacing: 0.2rem;
-  text-shadow: 1px 1px 3px #000;
   font-family: "Roboto Condensed", sans-serif;
 }
 
@@ -50,7 +52,6 @@ a {
   font-weight: 400;
   letter-spacing: 0.2rem;
   text-decoration: none !important;
-  text-shadow: 3px 3px 5px #000;
   font-family: "Monoton", cursive;
 }
 
@@ -139,11 +140,11 @@ header.header-section {
       text-transform: uppercase;
 
       h1 {
-        color: var(--header-title);
+        color: var(--header-h1);
       }
 
       h2 {
-        color: var(--secondary-header-title);
+        color: var(--header-h2);
       }
 
       a.primaryBtn {
@@ -154,14 +155,14 @@ header.header-section {
         display: inline-block;
         text-decoration: none;
         padding: 0.4rem 1.8rem;
-        background: var(--btn-color);
+        color: var(--header-font);
+        background: var(--btn-primary);
         box-shadow: 3px 3px 8px #000;
         transition: all 0.6s ease-in-out;
-        color: var(--secondary-header-title);
 
         &:hover {
           letter-spacing: 0.4rem;
-          background: var(--btn-hover-color);
+          background: var(--btn-secondary);
         }
       }
 
@@ -171,13 +172,13 @@ header.header-section {
           outline: none;
           font-size: 2.4rem;
           display: inline-block;
-          color: var(--btn-color);
+          color: var(--btn-primary);
           margin: 0 2rem 0 2rem;
           text-shadow: 3px 3px 8px #000;
           transition: all 0.4s ease-in-out;
 
           &:hover {
-            color: var(--btn-hover-color);
+            color: var(--btn-secondary);
             transform: translateY(-10px);
           }
         }
@@ -195,10 +196,12 @@ section.about-section {
   height: 100vh;
   padding: 2rem 0;
   position: relative;
+  background: var(--about-bg);
 
   h1.primary-heading {
     text-align: center;
-    color: var(--header-title);
+    color: var(--header-h1);
+    text-shadow: 5px 5px 8px #000;
 
     &::before {
       content: "";
@@ -207,8 +210,8 @@ section.about-section {
       width: 200px;
       height: 10px;
       position: absolute;
-      box-shadow: 3px 3px 5px #000;
-      background: var(--font-color);
+      box-shadow: 5px 5px 8px #000;
+      background: var(--header-h1);
     }
 
     &::after {
@@ -218,8 +221,8 @@ section.about-section {
       width: 200px;
       height: 10px;
       position: absolute;
-      box-shadow: 3px 3px 5px #000;
-      background: var(--font-color);
+      box-shadow: 5px 5px 8px #000;
+      background: var(--header-h1);
     }
   }
 
@@ -237,16 +240,17 @@ section.about-section {
         font-size: 4rem;
         font-weight: 900;
         letter-spacing: 0.2rem;
-        color: var(--header-title);
+        color: var(--header-h2);
+        text-shadow: 5px 5px 8px #000;
         font-family: "Roboto Condensed", sans-serif;
       }
 
       p {
         font-size: 1.2rem;
         font-weight: 500;
-        text-align: justify;
+        text-align: left;
         letter-spacing: 0.2rem;
-        color: var(--text-content);
+        color: var(--about-p);
         text-shadow: 3px 3px 5px #000;
         font-family: "Open Sans Condensed", sans-serif;
       }
@@ -259,15 +263,15 @@ section.about-section {
         padding: 0.4rem 1.8rem;
         display: inline-block;
         text-decoration: none;
-        letter-spacing: 0.3rem;
-        color: var(--text-content);
-        background: var(--btn-color);
+        letter-spacing: 0.2rem;
+        color: var(--header-font);
+        background: var(--btn-primary);
         box-shadow: 3px 3px 8px #000;
-        transition: all 0.4s ease-in-out;
+        transition: all 0.6s ease-in-out;
 
         &:hover {
           letter-spacing: 0.4rem;
-          background: var(--btn-hover-color);
+          background: var(--btn-secondary);
         }
       }
     }
@@ -288,7 +292,7 @@ section.about-section {
       }
 
       &:hover {
-        outline: 1rem solid var(--btn-color);
+        outline: 1rem solid var(--btn-primary);
         transform: scale(1.06) translateY(-0.5rem);
       }
     }
@@ -301,32 +305,32 @@ section.achievement {
   width: 100%;
   height: 100%;
   position: relative;
-  background: #ccc;
+  background: var(--resume-bg);
 
   .header-main {
     display: flex;
-    padding: 0.5rem 0;
-    background: #ddd;
+    padding: 1.4rem 0 0.2rem 0;
     align-items: center;
     justify-content: center;
+    background: var(--resume-header);
     box-shadow: 0 3px 8px rgba(#000, 0.4);
 
     h1 {
       font-size: 4rem;
-      font-weight: 700;
+      font-weight: 500;
       text-align: center;
       letter-spacing: 0.2rem;
+      color: var(--resume-h1);
       text-transform: uppercase;
-      color: #222;
-      text-shadow: 3px 3px 5px #000;
-      font-family: "Roboto Condensed", sans-serif;
+      text-shadow: 2px 2px 4px rgba(#000, 0.4);
+      font-family: "Bangers", cursive;
     }
 
     i {
       font-size: 3rem;
-      margin: -0.5rem 1rem 0 0;
-      color: #222;
-      text-shadow: 3px 3px 5px #000;
+      margin: -1rem 1rem 0 0;
+      color: var(--resume-h1);
+      text-shadow: 2px 2px 4px rgba(#000, 0.4);
     }
   }
 
@@ -336,22 +340,23 @@ section.achievement {
     ul {
       h1.edu {
         width: 20%;
-        color: #000;
+        color: var(--resume-h1);
         line-height: 2;
         font-size: 2rem;
         display: flex;
         padding: 0.2rem 8rem;
         font-weight: 700;
-        background: #ddd;
         text-align: center;
         align-items: center;
+        text-shadow: none;
         letter-spacing: 0.2rem;
         justify-content: center;
         margin: 0 auto 1rem auto;
-        border: 0.2rem solid #333;
-        text-shadow: none;
+        font-family: "Bangers", cursive;
+        background: var(--resume-header);
+        border: 0.2rem solid var(--resume-h1);
+        text-shadow: 2px 2px 4px rgba(#000, 0.4);
         box-shadow: 3px 3px 8px 2px rgba(#000, 0.4);
-        font-family: "Roboto Condensed", sans-serif;
       }
 
       li {
@@ -359,7 +364,7 @@ section.achievement {
         margin: 0 auto;
         padding-top: 30px;
         position: relative;
-        background: var(--achievement-color);
+        background: var(--resume-h1);
         box-shadow: 3px 3px 8px 2px rgba(#000, 0.4);
 
         div {
@@ -377,29 +382,35 @@ section.achievement {
           box-shadow: 3px 3px 8px rgba(#000, 0.4);
 
           h1 {
-            color: #000;
             line-height: 2;
             font-weight: 900;
             text-shadow: none;
             font-size: 1.2rem;
             letter-spacing: 0.2rem;
+            color: var(--resume-h1);
             font-family: "Roboto Condensed", sans-serif;
 
             i {
+              font-size: 1rem;
               padding: 0 0.2rem 0 0;
-              font-size: 0.8rem;
               color: var(--achievement-color);
             }
           }
 
           p {
             font-size: 1rem;
-            font-weight: 700;
+            font-weight: 900;
             line-height: 1.6;
             letter-spacing: 0.2rem;
-            text-shadow: none;
-            color: rgba(34, 34, 34, 1);
+            color: var(--resume-p);
             font-family: "Open Sans Condensed", sans-serif;
+
+            span {
+              a {
+                margin: 0 0.4rem;
+                font-size: 1rem;
+              }
+            }
           }
         }
 
@@ -424,7 +435,7 @@ section.achievement {
           border-radius: 50%;
           position: absolute;
           transform: translateX(-50%);
-          background: #333;
+          background: var(--resume-h1);
           box-shadow: 3px 3px 8px 2px rgba(#000, 0.4);
           transition: background 0.5s ease-in-out;
         }
@@ -453,32 +464,37 @@ section.skills {
   width: 100%;
   height: 100%;
   position: relative;
-  background: rgba(127, 140, 141, 1);
+  background: var(--resume-header);
 
   h1 {
     width: 100%;
-    color: #ddd;
     font-size: 4rem;
-    font-weight: 700;
+    font-weight: 500;
     text-align: center;
-    background: rgb(108, 120, 121);
     letter-spacing: 0.2rem;
+    color: var(--resume-h1);
     text-transform: uppercase;
-    text-shadow: 3px 3px 5px #000;
-    box-shadow: 3px 3px 5px #000;
-    font-family: "Roboto Condensed", sans-serif;
+    background: var(--resume-bg);
+    font-family: "Bangers", cursive;
+    text-shadow: 2px 2px 4px rgba(#000, 0.4);
+    box-shadow: 0 3px 8px rgba(#000, 0.4);
   }
 
   div.row {
-    padding: 2rem 0;
+    padding: 2rem 0 4rem 0;
+
     div {
       h2 {
+        color: var(--resume-h1);
         font-size: 2.6rem;
+        font-family: "Bangers", cursive;
+        text-shadow: 2px 2px 4px rgba(#000, 0.4);
       }
       div.progress-bar {
         width: 100%;
         height: 3em;
         color: white;
+        font-weight: 900;
         position: relative;
         border-radius: 1.5em;
         background-color: #111;
@@ -508,6 +524,127 @@ section.skills {
   }
 }
 // END SKILLS SECTION
+
+// CONTACT SECTION
+section.contact-section {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: var(--resume-bg);
+
+  h1 {
+    width: 100%;
+    font-size: 4rem;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    color: var(--font-color);
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(#000, 0.4);
+    background: var(--resume-header);
+    font-family: "Bangers", cursive;
+    box-shadow: 0 3px 8px rgba(#000, 0.4);
+  }
+
+  .contact-content {
+    padding: 4rem 0;
+    font-family: "Bangers", cursive;
+    .content-1 {
+      form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        label {
+          display: block;
+          font-size: 2rem;
+          font-weight: 500;
+          color: var(--resume-h1);
+          text-transform: uppercase;
+          line-height: 1;
+          text-shadow: 2px 2px 4px rgba(#000, 0.4);
+        }
+
+        input {
+          border: 0;
+          width: 100%;
+          outline: none;
+          padding: 0.2rem;
+          margin: 0 0 2rem 0;
+          font-size: 1.4rem;
+        }
+
+        input[type="submit"] {
+          border: 0;
+          color: #fff;
+          cursor: pointer;
+          outline: none;
+          letter-spacing: 0.2rem;
+          background: rgba(0, 121, 107, 1);
+          transition: all 0.5s ease-in-out;
+          font-family: "Monoton", cursive;
+
+          &:hover {
+            letter-spacing: 0.4rem;
+            background: rgba(0, 137, 123, 1);
+          }
+        }
+
+        textarea {
+          width: 100%;
+          resize: none;
+          border: 0;
+          width: 100%;
+          outline: none;
+          padding: 0.2rem;
+          margin: 0 0 0.8rem 0;
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    .content-2 {
+      iframe {
+        width: 100%;
+        border: 0.5rem solid var(--resume-h1);
+      }
+    }
+  }
+}
+// END CONTACT SECTION
+
+// FOOTER SECTION
+footer.footer-section {
+  background: #202020;
+  padding: 0.2rem 0 0.6rem 0;
+
+  .social-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      color: var(--btn-primary);
+      outline: none;
+      font-size: 2rem;
+      display: inline-block;
+      margin: 1rem 1.8rem 0 1.8rem;
+      transition: all 0.4s ease-in-out;
+      text-shadow: 2px 2px 4px rgba(#000, 0.4);
+
+      &:hover {
+        color: var(--btn-secondary);
+        transform: translateY(-10px);
+      }
+    }
+  }
+}
+// END FOOTER SECTION
 
 // MEDIA QUERIES
 @media only screen and (min-width: 769px) and (max-width: 991px) {
@@ -568,7 +705,7 @@ section.skills {
 
         p {
           font-size: 1.2rem;
-          text-align: justify;
+          text-align: center;
         }
 
         a {
@@ -681,7 +818,7 @@ section.skills {
 
         p {
           font-size: 1.2rem;
-          text-align: justify;
+          text-align: center;
         }
 
         a {
@@ -791,7 +928,7 @@ section.skills {
 
         p {
           font-size: 1rem;
-          text-align: justify;
+          text-align: center;
         }
 
         a {
@@ -847,6 +984,15 @@ section.skills {
             transform: translate(20px, 0);
           }
         }
+      }
+    }
+  }
+
+  footer.footer-section {
+    .social-content {
+      a {
+        font-size: 1.5rem;
+        margin: 1rem 1.4rem 0 1.4rem;
       }
     }
   }
@@ -910,7 +1056,7 @@ section.skills {
 
         p {
           font-size: 1rem;
-          text-align: justify;
+          text-align: center;
         }
 
         a {
