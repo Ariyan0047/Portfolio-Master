@@ -471,6 +471,75 @@ section.achievement .timeline ul li::after {
   transition: background 0.5s ease-in-out;
 }
 
+section.skills {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #7f8c8d;
+}
+
+section.skills h1 {
+  width: 100%;
+  color: #ddd;
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  background: #6c7879;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 5px #000;
+  -webkit-box-shadow: 3px 3px 5px #000;
+          box-shadow: 3px 3px 5px #000;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+section.skills div.row {
+  padding: 2rem 0;
+}
+
+section.skills div.row div h2 {
+  font-size: 2.6rem;
+}
+
+section.skills div.row div div.progress-bar {
+  width: 100%;
+  height: 3em;
+  color: white;
+  position: relative;
+  border-radius: 1.5em;
+  background-color: #111;
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.85);
+          box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.85);
+}
+
+section.skills div.row div div.progress-bar::before {
+  content: attr(data-label);
+  top: 0.5em;
+  left: 0.5em;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 0.5em;
+  min-width: 2rem;
+  border-radius: 1em;
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  background-color: #069;
+  max-width: calc(100% - 1em);
+  width: calc(var(--width, 0) * 1%);
+  -webkit-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.5);
+  -webkit-animation: animateProgressBar 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+          animation: animateProgressBar 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
 @media only screen and (min-width: 769px) and (max-width: 991px) {
   header.header-section .header-content .text-content h1.primary-heading {
     font-size: 4rem;
@@ -821,6 +890,20 @@ section.achievement .timeline ul li::after {
     left: 20px;
     -webkit-transform: translate(20px, 0);
             transform: translate(20px, 0);
+  }
+}
+
+@-webkit-keyframes animateProgressBar {
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes animateProgressBar {
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
   }
 }
 /*# sourceMappingURL=style.css.map */

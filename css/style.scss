@@ -448,6 +448,67 @@ section.achievement {
 }
 // END ACHIEVEMENT SECTION
 
+// SKILLS SECTION
+section.skills {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: rgba(127, 140, 141, 1);
+
+  h1 {
+    width: 100%;
+    color: #ddd;
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    background: rgb(108, 120, 121);
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 5px #000;
+    box-shadow: 3px 3px 5px #000;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+
+  div.row {
+    padding: 2rem 0;
+    div {
+      h2 {
+        font-size: 2.6rem;
+      }
+      div.progress-bar {
+        width: 100%;
+        height: 3em;
+        color: white;
+        position: relative;
+        border-radius: 1.5em;
+        background-color: #111;
+        box-shadow: 3px 3px 5px rgba(#000, 0.85);
+
+        &::before {
+          content: attr(data-label);
+          top: 0.5em;
+          left: 0.5em;
+          padding: 1em;
+          display: flex;
+          bottom: 0.5em;
+          min-width: 2rem;
+          border-radius: 1em;
+          position: absolute;
+          align-items: center;
+          transform: scaleX(0);
+          transform-origin: left;
+          background-color: #069;
+          max-width: calc(100% - 1em);
+          width: calc(var(--width, 0) * 1%);
+          box-shadow: inset 1px 1px 2px rgba(#000, 0.5);
+          animation: animateProgressBar 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+        }
+      }
+    }
+  }
+}
+// END SKILLS SECTION
+
 // MEDIA QUERIES
 @media only screen and (min-width: 769px) and (max-width: 991px) {
   header.header-section {
@@ -910,5 +971,11 @@ section.achievement {
         }
       }
     }
+  }
+}
+
+@keyframes animateProgressBar {
+  100% {
+    transform: scaleX(1);
   }
 }
