@@ -68,9 +68,29 @@ body {
   background: var(--bg-color);
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #444;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-btn);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-btn);
+}
+
 .navbar {
   top: 0;
-  z-index: 6;
+  z-index: 100;
   width: 500px;
   height: 100%;
   right: -500px;
