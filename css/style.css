@@ -5,8 +5,8 @@
 :root {
   --header-h1: rgba(238, 238, 238, 1);
   --header-h2: rgba(158, 158, 158, 1);
-  --btn-primary: rgba(0, 121, 107, 0.5);
-  --btn-secondary: rgba(0, 137, 123, 0.5);
+  --btn-primary: rgba(0, 102, 153, 0.5);
+  --btn-secondary: rgba(1, 84, 126, 0.5);
   --header-font: rgba(224, 224, 224, 1);
   --about-bg: rgba(19, 20, 24, 1);
   --about-p: rgba(189, 189, 189, 1);
@@ -14,6 +14,8 @@
   --resume-p: rgba(68, 68, 68, 1);
   --resume-bg: rgba(204, 204, 204, 1);
   --resume-header: rgba(221, 221, 221, 1);
+  --primary-btn: rgba(0, 102, 153, 1);
+  --secondary-btn: rgba(1, 84, 126, 1);
 }
 
 * {
@@ -242,7 +244,7 @@ section.about-section .about-content .about-text h1 {
   font-size: 4rem;
   font-weight: 900;
   letter-spacing: 0.2rem;
-  color: var(--header-h2);
+  color: var(--header-font);
   text-shadow: 5px 5px 8px #000;
   font-family: "Roboto Condensed", sans-serif;
 }
@@ -252,7 +254,7 @@ section.about-section .about-content .about-text p {
   font-weight: 500;
   text-align: left;
   letter-spacing: 0.2rem;
-  color: var(--about-p);
+  color: var(--header-font);
   text-shadow: 3px 3px 5px #000;
   font-family: "Open Sans Condensed", sans-serif;
 }
@@ -267,7 +269,7 @@ section.about-section .about-content .about-text a {
   text-decoration: none;
   letter-spacing: 0.2rem;
   color: var(--header-font);
-  background: var(--btn-primary);
+  background: var(--primary-btn);
   -webkit-box-shadow: 3px 3px 8px #000;
           box-shadow: 3px 3px 8px #000;
   -webkit-transition: all 0.6s ease-in-out;
@@ -276,7 +278,7 @@ section.about-section .about-content .about-text a {
 
 section.about-section .about-content .about-text a:hover {
   letter-spacing: 0.4rem;
-  background: var(--btn-secondary);
+  background: var(--secondary-btn);
 }
 
 section.about-section .about-content .about-img {
@@ -299,7 +301,7 @@ section.about-section .about-content .about-img .img {
 }
 
 section.about-section .about-content .about-img:hover {
-  outline: 1rem solid var(--btn-primary);
+  outline: 1rem solid var(--primary-btn);
   -webkit-transform: scale(1.06) translateY(-0.5rem);
           transform: scale(1.06) translateY(-0.5rem);
 }
@@ -315,7 +317,7 @@ section.achievement .header-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 1.4rem 0 0.2rem 0;
+  padding: 0.2rem 0 0 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -340,7 +342,7 @@ section.achievement .header-main h1 {
 
 section.achievement .header-main i {
   font-size: 3rem;
-  margin: -1rem 1rem 0 0;
+  margin: -0.6rem 1rem 0 0;
   color: var(--resume-h1);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
@@ -393,7 +395,7 @@ section.achievement .timeline ul li div {
   width: 500px;
   padding: 1rem;
   position: relative;
-  background: #ccc;
+  background: var(--resume-header);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   text-transform: uppercase;
@@ -429,7 +431,7 @@ section.achievement .timeline ul li div p {
 
 section.achievement .timeline ul li div p span a {
   margin: 0 0.4rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 section.achievement .timeline ul li:nth-child(odd) div {
@@ -557,6 +559,7 @@ section.contact-section {
   width: 100%;
   height: 100%;
   position: relative;
+  padding: 0 0 2rem 0;
   background: var(--resume-bg);
 }
 
@@ -566,7 +569,7 @@ section.contact-section h1 {
   font-weight: 500;
   text-align: center;
   letter-spacing: 0.2rem;
-  color: var(--font-color);
+  color: var(--resume-h1);
   text-transform: uppercase;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   background: var(--resume-header);
@@ -576,7 +579,7 @@ section.contact-section h1 {
 }
 
 section.contact-section .contact-content {
-  padding: 4rem 0;
+  padding: 4rem 0 2rem 0;
   font-family: "Bangers", cursive;
 }
 
@@ -609,9 +612,12 @@ section.contact-section .contact-content .content-1 form input {
   border: 0;
   width: 100%;
   outline: none;
-  padding: 0.2rem;
-  margin: 0 0 2rem 0;
   font-size: 1.4rem;
+  margin: 0 0 2rem 0;
+  padding: 0.2rem 0.5rem;
+  border: 0.2rem solid var(--resume-header);
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
 }
 
 section.contact-section .contact-content .content-1 form input[type="submit"] {
@@ -620,15 +626,17 @@ section.contact-section .contact-content .content-1 form input[type="submit"] {
   cursor: pointer;
   outline: none;
   letter-spacing: 0.2rem;
-  background: #00796b;
+  background: var(--primary-btn);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   font-family: "Monoton", cursive;
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
 }
 
 section.contact-section .contact-content .content-1 form input[type="submit"]:hover {
   letter-spacing: 0.4rem;
-  background: #00897b;
+  background: var(--secondary-btn);
 }
 
 section.contact-section .contact-content .content-1 form textarea {
@@ -637,18 +645,87 @@ section.contact-section .contact-content .content-1 form textarea {
   border: 0;
   width: 100%;
   outline: none;
-  padding: 0.2rem;
-  margin: 0 0 0.8rem 0;
   font-size: 1.4rem;
+  margin: 0 0 0.8rem 0;
+  padding: 0.2rem 0.4rem;
+  border: 0.2rem solid var(--resume-header);
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
 }
 
 section.contact-section .contact-content .content-2 iframe {
   width: 100%;
   border: 0.5rem solid var(--resume-h1);
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+section.contact-section .address .content-1 {
+  margin: 0.6rem 1rem;
+  padding: 1rem;
+  background: var(--resume-header);
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+section.contact-section .address .content-1 h1 {
+  font-size: 2rem;
+  color: var(--resume-h1);
+}
+
+section.contact-section .address .content-1 .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.contact-section .address .content-1 .content .icon {
+  padding: 1rem 0.5rem 0 0.5rem;
+}
+
+section.contact-section .address .content-1 .content .icon i {
+  font-size: 2rem;
+}
+
+section.contact-section .address .content-1 .content .text-content {
+  padding: 1rem 0 0 0;
+}
+
+section.contact-section .address .content-1 .content .text-content p {
+  line-height: 1.2;
+  padding: 0;
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0;
+  font-family: sans-serif;
+}
+
+section.contact-section .address .content-1 .content .text-content.add p {
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--resume-h1);
+}
+
+section.contact-section .address .content-1 .content .text-content.num p {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--resume-h1);
+}
+
+section.contact-section .address .content-1 .content .text-content.mail p > a {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--resume-h1);
+  letter-spacing: 0;
+  font-family: sans-serif;
+  text-transform: lowercase;
 }
 
 footer.footer-section {
-  background: #202020;
+  background: var(--about-bg);
   padding: 0.2rem 0 0.6rem 0;
 }
 
@@ -667,7 +744,7 @@ footer.footer-section .social-content {
 }
 
 footer.footer-section .social-content a {
-  color: var(--btn-primary);
+  color: var(--primary-btn);
   outline: none;
   font-size: 2rem;
   display: inline-block;
@@ -678,7 +755,7 @@ footer.footer-section .social-content a {
 }
 
 footer.footer-section .social-content a:hover {
-  color: var(--btn-secondary);
+  color: var(--secondary-btn);
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
 }
