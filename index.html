@@ -25,9 +25,56 @@
     <script src="./js/particle.js" defer></script>
     <script src="./js/app.js" defer></script>
     <script src="./js/main.js" defer></script>
+
     <!-- END JS FILES -->
   </head>
   <body>
+    <!-- NAVBAR SECTION -->
+    <nav class="navbar">
+      <div class="hamburger-menu">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+        <div class="line line-4"></div>
+      </div>
+
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#home" class="nav-link">home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link">about</a>
+        </li>
+        <li class="nav-item">
+          <a href="#resume" class="nav-link">resume</a>
+        </li>
+        <li class="nav-item">
+          <a href="#skills" class="nav-link">skills</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">contact</a>
+        </li>
+
+        <div class="social-content container">
+          <a href="https://www.facebook.com/aariyan0047/" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="https://github.com/Ariyan0047" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/ariyan0047" target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://stackoverflow.com/users/11912821/ariyan-ashfaque-mostafa"
+            target="_blank"
+            ><i class="fab fa-stack-overflow"></i
+          ></a>
+        </div>
+      </ul>
+    </nav>
+    <!-- END NAVBAR SECTION -->
+
     <!-- HEADER SECTION -->
     <header class="header-section" id="home">
       <div id="particles-js"></div>
@@ -36,11 +83,21 @@
           <h1 class="primary-heading">ariyan ashfaque</h1>
           <h2 class="secondary-heading">web developer</h2>
           <a href="#about" class="primaryBtn">explore more</a>
-          <div class="social-content">
-            <a href=""><i class="fab fa-facebook"></i></a>
-            <a href=""><i class="fab fa-github"></i></a>
-            <a href=""><i class="fab fa-linkedin"></i></a>
-            <a href=""><i class="fab fa-stack-overflow"></i></a>
+          <div class="social-content container">
+            <a href="https://www.facebook.com/aariyan0047/" target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="https://github.com/Ariyan0047" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/ariyan0047" target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://stackoverflow.com/users/11912821/ariyan-ashfaque-mostafa"
+              target="_blank"
+              ><i class="fab fa-stack-overflow"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -54,12 +111,13 @@
         <div class="about-text">
           <h1>who am i</h1>
           <p>
-            hi, i'm ariyan ashfaque. i'v completed "b.sc. in Computer Science &
-            engineering" from "daffodil international university". i'm a
-            front-end developer with 2 year's of academic and personal project
-            experience.
+            hi, i'm md. ariyan ashfaque mostafa. i'v completed "b.sc in Computer
+            Science & engineering" from "daffodil international university". i'm
+            a ui/ux designer and front-end developer with 2 year's of academic
+            and personal project experience. i also have experience with machine
+            learning.
           </p>
-          <a href="">findout more</a>
+          <a href="#resume">findout more</a>
         </div>
         <div class="about-img">
           <div class="img"></div>
@@ -69,7 +127,7 @@
     <!-- END ABOUT SECTION -->
 
     <!-- ACHIEVEMENTS SECTION -->
-    <section class="achievement" id="achievement">
+    <section class="achievement" id="resume">
       <div class="header-main">
         <i class="fas fa-brain"></i>
         <h1>resume</h1>
@@ -139,7 +197,7 @@
             <div>
               <h1>Python Data Structures</h1>
               <p>
-                Coursera
+                Coursera:
                 <span class="text-muted"
                   ><a
                     href="https://www.coursera.org/account/accomplishments/certificate/5WMBYH5L5BQG"
@@ -154,7 +212,7 @@
             <div>
               <h1>Image Classification with CNNs using Keras</h1>
               <p>
-                Coursera
+                Coursera:
                 <span class="text-muted"
                   ><a
                     href="https://www.coursera.org/account/accomplishments/certificate/5WMBYH5L5BQG"
@@ -169,7 +227,7 @@
             <div>
               <h1>Introduction to SQL</h1>
               <p>
-                datacamp
+                datacamp:
                 <span class="text-muted"
                   ><a
                     href="http://datacamp.com/statement-of-accomplishment/course/a2d73f86fbd35149dff6230d0f9ec771d6706d4e"
@@ -184,7 +242,7 @@
             <div>
               <h1>Programming for Everybody (Getting Started with Python)</h1>
               <p>
-                Coursera
+                Coursera:
                 <span class="text-muted"
                   ><a
                     href="https://www.coursera.org/account/accomplishments/certificate/6UA3A8T6SBGH"
@@ -283,7 +341,13 @@
             <form action="#">
               <div class="name">
                 <label for="name">name</label>
-                <input type="text" name="name" id="name" placeholder="name" />
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="name"
+                  required
+                />
               </div>
               <div class="email">
                 <label for="email">email</label>
@@ -291,6 +355,7 @@
                   type="email"
                   name="email"
                   id="email"
+                  required
                   placeholder="email"
                 />
               </div>
@@ -299,11 +364,12 @@
                 <textarea
                   name="message"
                   id="message"
+                  required
                   placeholder="message"
                 ></textarea>
               </div>
               <div class="submit">
-                <input type="submit" value="SUBMIT" />
+                <input type="submit" value="SUBMIT" id="submit" />
               </div>
             </form>
           </div>
@@ -348,8 +414,16 @@
                 <i class="fas fa-envelope-open-text"></i>
               </div>
               <div class="text-content mail">
-                <p><a href="">ariyan15-9047@diu.edu.bd</a></p>
-                <p><a href="">aariyan0047@gmail.com</a></p>
+                <p>
+                  <a href="mailto:ariyan15-9047@diu.edu.bd"
+                    >ariyan15-9047@diu.edu.bd</a
+                  >
+                </p>
+                <p>
+                  <a href="mailto:aariyan0047@gmail.com"
+                    >aariyan0047@gmail.com</a
+                  >
+                </p>
               </div>
             </div>
           </div>
@@ -361,12 +435,41 @@
     <!-- FOOTER SECTION -->
     <footer class="footer-section">
       <div class="social-content container">
-        <a href=""><i class="fab fa-facebook"></i></a>
-        <a href=""><i class="fab fa-github"></i></a>
-        <a href=""><i class="fab fa-linkedin"></i></a>
-        <a href=""><i class="fab fa-stack-overflow"></i></a>
+        <a href="https://www.facebook.com/aariyan0047/" target="_blank"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a href="https://github.com/Ariyan0047" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/ariyan0047" target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a
+          href="https://stackoverflow.com/users/11912821/ariyan-ashfaque-mostafa"
+          target="_blank"
+          ><i class="fab fa-stack-overflow"></i
+        ></a>
       </div>
     </footer>
     <!-- END FOOTER SECTION -->
+
+    <!--  jQuery Smooth Scrolling -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(".navbar a, .container a").on("click", function (e) {
+        if (this.hash !== "") {
+          e.preventDefault();
+
+          const hash = this.hash;
+
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            1000
+          );
+        }
+      });
+    </script>
   </body>
 </html>

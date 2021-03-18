@@ -68,6 +68,117 @@ body {
   background: var(--bg-color);
 }
 
+.navbar {
+  top: 0;
+  z-index: 6;
+  width: 500px;
+  height: 100%;
+  right: -500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(0, 0, 0, 0.85);
+  -webkit-transition: right 0.8s cubic-bezier(1, 0, 0.5, 1);
+  transition: right 0.8s cubic-bezier(1, 0, 0.5, 1);
+}
+
+.navbar .hamburger-menu {
+  top: 30px;
+  right: 30px !important;
+  width: 35px;
+  height: 30px;
+  padding: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  position: fixed;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border: 2px solid var(--header-h1);
+  background-color: rgba(17, 5, 5, 0.2);
+}
+
+.navbar .hamburger-menu:focus {
+  outline: none;
+}
+
+.navbar .hamburger-menu .line {
+  width: 100%;
+  height: 3px;
+  background-color: var(--header-h1);
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}
+
+.navbar ul.nav-list {
+  text-align: center;
+}
+
+.navbar ul.nav-list li.nav-item {
+  margin: 20px;
+  list-style: none;
+}
+
+.navbar ul.nav-list li.nav-item a.nav-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 30px;
+  border-radius: 50% 0 50% 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-weight: 500;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  font-family: "Monoton", cursive;
+}
+
+.navbar ul.nav-list li.nav-item a.nav-link:focus {
+  outline: none;
+}
+
+.navbar ul.nav-list li.nav-item a.nav-link:hover {
+  background: var(--btn-primary);
+}
+
+.navbar ul.nav-list .social-content a {
+  margin: 0 0.5rem;
+}
+
+.change {
+  right: 0;
+}
+
+.change .line-1 {
+  -webkit-transform: rotateZ(-405deg) translate(-5.5px, 5px);
+          transform: rotateZ(-405deg) translate(-5.5px, 5px);
+}
+
+.change .line-2 {
+  opacity: 0;
+}
+
+.change .line-3 {
+  opacity: 0;
+}
+
+.change .line-4 {
+  -webkit-transform: rotateZ(405deg) translate(-5.5px, -5px);
+          transform: rotateZ(405deg) translate(-5.5px, -5px);
+}
+
 header.header-section {
   top: 0;
   left: 0;
@@ -198,8 +309,8 @@ section.about-section h1.primary-heading {
 section.about-section h1.primary-heading::before {
   content: "";
   top: 5rem;
-  left: 10rem;
-  width: 200px;
+  left: 6rem;
+  width: 240px;
   height: 10px;
   position: absolute;
   -webkit-box-shadow: 5px 5px 8px #000;
@@ -210,7 +321,7 @@ section.about-section h1.primary-heading::before {
 section.about-section h1.primary-heading::after {
   content: "";
   top: 5rem;
-  right: 10rem;
+  right: 8rem;
   width: 200px;
   height: 10px;
   position: absolute;
@@ -695,9 +806,9 @@ section.contact-section .address .content-1 .content .text-content {
 }
 
 section.contact-section .address .content-1 .content .text-content p {
-  line-height: 1.2;
   padding: 0;
   margin: 0;
+  line-height: 1.2;
   font-size: 0.8rem;
   letter-spacing: 0;
   font-family: sans-serif;
@@ -840,6 +951,9 @@ footer.footer-section .social-content a:hover {
     -webkit-transform: translate(-20px, 0);
             transform: translate(-20px, 0);
   }
+  .navbar {
+    width: 500px;
+  }
 }
 
 @media only screen and (min-width: 501px) and (max-width: 768px) {
@@ -925,6 +1039,12 @@ footer.footer-section .social-content a:hover {
     left: -330px;
     -webkit-transform: translate(-20px, 0);
             transform: translate(-20px, 0);
+  }
+  .navbar {
+    width: 500px;
+  }
+  .navbar .hamburger-menu {
+    right: 50px;
   }
 }
 
@@ -1021,6 +1141,15 @@ footer.footer-section .social-content a:hover {
     font-size: 1.5rem;
     margin: 1rem 1.4rem 0 1.4rem;
   }
+  .navbar {
+    width: 200px;
+  }
+  .navbar ul.nav-list li.nav-item a.nav-link {
+    font-size: 1rem;
+  }
+  .navbar ul.nav-list .social-content a {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (max-width: 320px) {
@@ -1114,6 +1243,93 @@ footer.footer-section .social-content a:hover {
     left: 20px;
     -webkit-transform: translate(20px, 0);
             transform: translate(20px, 0);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  section.about-section {
+    height: 100%;
+  }
+  section.about-section h1.primary-heading::before {
+    content: "";
+    top: 5rem;
+    left: 4rem;
+    width: 100px;
+  }
+  section.about-section h1.primary-heading::after {
+    content: "";
+    top: 5rem;
+    right: 4rem;
+    width: 100px;
+  }
+  section.about-section .about-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 4rem 2rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section.about-section .about-content .about-text {
+    width: 500px;
+  }
+  section.achievement .timeline ul li div {
+    width: 400px;
+  }
+  section.achievement .timeline ul li:nth-child(odd) div {
+    left: 30px;
+    -webkit-transform: translate(20px, 0);
+            transform: translate(20px, 0);
+  }
+  section.achievement .timeline ul li:nth-child(even) div {
+    left: -480px;
+    -webkit-transform: translate(10px, 0);
+            transform: translate(10px, 0);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  section.about-section h1.primary-heading::before {
+    content: "";
+    top: 5rem;
+    left: 8rem;
+    width: 200px;
+  }
+  section.about-section h1.primary-heading::after {
+    content: "";
+    top: 5rem;
+    right: 8rem;
+    width: 200px;
+  }
+  section.about-section .about-content .about-text {
+    width: 600px;
+  }
+  section.achievement .timeline ul li div {
+    width: 500px;
+  }
+  section.achievement .timeline ul li:nth-child(odd) div {
+    left: 30px;
+    -webkit-transform: translate(20px, 0);
+            transform: translate(20px, 0);
+  }
+  section.achievement .timeline ul li:nth-child(even) div {
+    left: -530px;
+    -webkit-transform: translate(-20px, 0);
+            transform: translate(-20px, 0);
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .navbar .hamburger-menu {
+    right: 90px;
   }
 }
 
