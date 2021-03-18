@@ -363,7 +363,7 @@ section.about-section .about-content .about-text h1 {
 section.about-section .about-content .about-text p {
   font-size: 1.2rem;
   font-weight: 500;
-  text-align: left;
+  text-align: justify;
   letter-spacing: 0.2rem;
   color: var(--header-font);
   text-shadow: 3px 3px 5px #000;
