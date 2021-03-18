@@ -144,7 +144,12 @@ body {
 
     .social-content {
       a {
+        color: var(--btn-primary);
         margin: 0 0.5rem;
+
+        &:hover {
+          color: var(--btn-secondary);
+        }
       }
     }
   }

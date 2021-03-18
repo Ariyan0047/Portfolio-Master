@@ -154,7 +154,12 @@ body {
 }
 
 .navbar ul.nav-list .social-content a {
+  color: var(--btn-primary);
   margin: 0 0.5rem;
+}
+
+.navbar ul.nav-list .social-content a:hover {
+  color: var(--btn-secondary);
 }
 
 .change {
