@@ -1347,7 +1347,7 @@ footer.footer-section {
     .about-content {
       display: flex;
       flex-wrap: wrap;
-      padding: 2rem 2rem;
+      padding: 4rem 2rem;
       align-items: center;
       align-content: center;
       justify-content: space-between;
@@ -1388,22 +1388,24 @@ footer.footer-section {
   section.about-section {
     height: 100vh;
     h1.primary-heading {
+      font-size: 6rem;
       &::before {
         content: "";
-        top: 4rem;
-        left: 15rem;
+        top: 5rem;
+        left: 8rem;
         width: 200px;
       }
 
       &::after {
         content: "";
-        top: 4rem;
-        right: 15rem;
+        top: 5rem;
+        right: 8rem;
         width: 200px;
       }
     }
 
     .about-content {
+      padding: 4rem 2rem;
       .about-text {
         width: 600px;
       }
@@ -1435,6 +1437,25 @@ footer.footer-section {
 @media only screen and (min-width: 1400px) {
   section.about-section {
     height: 100vh;
+
+    h1 {
+      font-size: 6rem;
+    }
+
+    .about-content {
+      padding: 6rem 2rem;
+      .about-text {
+        width: 600px;
+
+        h1 {
+          font-size: 4rem;
+        }
+
+        p {
+          font-size: 1.4rem;
+        }
+      }
+    }
   }
   .navbar {
     .hamburger-menu {

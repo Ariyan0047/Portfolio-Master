@@ -1276,7 +1276,7 @@ footer.footer-section .social-content a:hover {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding: 2rem 2rem;
+    padding: 4rem 2rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1311,17 +1311,23 @@ footer.footer-section .social-content a:hover {
   section.about-section {
     height: 100vh;
   }
+  section.about-section h1.primary-heading {
+    font-size: 6rem;
+  }
   section.about-section h1.primary-heading::before {
     content: "";
-    top: 4rem;
-    left: 15rem;
+    top: 5rem;
+    left: 8rem;
     width: 200px;
   }
   section.about-section h1.primary-heading::after {
     content: "";
-    top: 4rem;
-    right: 15rem;
+    top: 5rem;
+    right: 8rem;
     width: 200px;
+  }
+  section.about-section .about-content {
+    padding: 4rem 2rem;
   }
   section.about-section .about-content .about-text {
     width: 600px;
@@ -1344,6 +1350,21 @@ footer.footer-section .social-content a:hover {
 @media only screen and (min-width: 1400px) {
   section.about-section {
     height: 100vh;
+  }
+  section.about-section h1 {
+    font-size: 6rem;
+  }
+  section.about-section .about-content {
+    padding: 6rem 2rem;
+  }
+  section.about-section .about-content .about-text {
+    width: 600px;
+  }
+  section.about-section .about-content .about-text h1 {
+    font-size: 4rem;
+  }
+  section.about-section .about-content .about-text p {
+    font-size: 1.4rem;
   }
   .navbar .hamburger-menu {
     right: 90px;
