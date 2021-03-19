@@ -789,6 +789,12 @@ section.contact-section .contact-content .content-1 form textarea {
           box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
 }
 
+section.contact-section .contact-content .content-1 form .recaptcha {
+  width: 100%;
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
 section.contact-section .contact-content .content-2 iframe {
   width: 100%;
   border: 0.5rem solid var(--resume-h1);

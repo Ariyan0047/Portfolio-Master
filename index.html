@@ -338,7 +338,7 @@
       <div class="container">
         <div class="row contact-content">
           <div class="col-md-4 content-1">
-            <form action="#">
+            <form action="POST" data-netlify="true">
               <div class="name">
                 <label for="name">name</label>
                 <input
@@ -367,6 +367,9 @@
                   required
                   placeholder="message"
                 ></textarea>
+              </div>
+              <div class="recaptcha">
+                <div data-netlify-recaptcha="true"></div>
               </div>
               <div class="submit">
                 <input type="submit" value="SUBMIT" id="submit" />
