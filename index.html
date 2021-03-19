@@ -338,18 +338,18 @@
       <div class="container">
         <div class="row contact-content">
           <div class="col-md-4 content-1">
-            <form action="POST" data-netlify="true">
-              <div class="name">
+            <form name="contact" method="POST" data-netlify="true">
+              <div>
                 <label for="name">name</label>
                 <input
                   type="text"
                   name="name"
                   id="name"
-                  placeholder="name"
                   required
+                  placeholder="name"
                 />
               </div>
-              <div class="email">
+              <div>
                 <label for="email">email</label>
                 <input
                   type="email"
@@ -359,7 +359,7 @@
                   placeholder="email"
                 />
               </div>
-              <div class="message">
+              <div>
                 <label for="message">message</label>
                 <textarea
                   name="message"
@@ -368,10 +368,10 @@
                   placeholder="message"
                 ></textarea>
               </div>
-              <div class="recaptcha m-2">
+              <div class="m-2">
                 <div data-netlify-recaptcha="true"></div>
               </div>
-              <div class="submit">
+              <div>
                 <input type="submit" value="SUBMIT" id="submit" />
               </div>
             </form>
