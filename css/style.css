@@ -791,8 +791,13 @@ section.contact-section .contact-content .content-1 form textarea {
 
 section.contact-section .contact-content .content-1 form .recaptcha {
   width: 100%;
+  margin: 0.2rem 0;
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
           box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+section.contact-section .contact-content .content-1 form .recaptcha div {
+  width: 100%;
 }
 
 section.contact-section .contact-content .content-2 iframe {

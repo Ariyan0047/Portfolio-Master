@@ -741,7 +741,12 @@ section.contact-section {
 
         .recaptcha {
           width: 100%;
+          margin: 0.2rem 0;
           box-shadow: 0 3px 8px rgba(#000, 0.4);
+
+          div {
+            width: 100%;
+          }
         }
       }
     }
